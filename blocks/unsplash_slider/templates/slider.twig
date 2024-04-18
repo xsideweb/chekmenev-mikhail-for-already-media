@@ -1,0 +1,35 @@
+<div class="unsplash-block">
+    <div class="unsplash-block-header">
+        <h2 class="unsplash-block-title">{{ title }}</h2>
+        <p class="unsplash-block-desc">{{ description }}</p>
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+          {% for photo in phototest %}
+            <div class="swiper-slide"><img src="{{ photo.src }}"></div>
+          {% endfor %}
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+<script>
+jQuery(document).ready(function() {
+    var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        slidesPerView: 1,
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+});
+</script>
