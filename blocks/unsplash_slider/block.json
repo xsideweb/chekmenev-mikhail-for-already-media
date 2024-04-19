@@ -1,0 +1,16 @@
+{
+    "name": "acf/unsplash-slider",
+    "title": "Unsplash Slider",
+    "description": "Unsplash Slider block that uses ACF fields.",
+    "style": [ "file:./unsplash-slider.css" ],
+    "category": "formatting",
+    "icon": "slides",
+    "keywords": ["style", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "unsplash-slider.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}
